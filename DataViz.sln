@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartWin", "src\System.Wind
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartSamples", "sample\ChartSamples\ChartSamples.csproj", "{B1EAF070-DA09-4AED-8CE8-CFD0851DEF9A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{B90AC214-0011-4AD0-B127-1AC18E8E7E9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pkg", "pkg", "{08D7E428-DA9C-429B-8481-B0D2D4DD03F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Windows.Forms.DataVisualization.net5", "pkg\System.Windows.Forms.DataVisualization.net5.csproj", "{6551E2AF-8DD9-4819-AECA-6C676F1972BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +29,18 @@ Global
 		{B1EAF070-DA09-4AED-8CE8-CFD0851DEF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1EAF070-DA09-4AED-8CE8-CFD0851DEF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1EAF070-DA09-4AED-8CE8-CFD0851DEF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6551E2AF-8DD9-4819-AECA-6C676F1972BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6551E2AF-8DD9-4819-AECA-6C676F1972BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6551E2AF-8DD9-4819-AECA-6C676F1972BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6551E2AF-8DD9-4819-AECA-6C676F1972BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1944C3B0-C641-419D-AE92-A96DD39B7C4F} = {8B60E1B8-479C-4AE1-B0FB-55189DD3B9DF}
+		{B1EAF070-DA09-4AED-8CE8-CFD0851DEF9A} = {B90AC214-0011-4AD0-B127-1AC18E8E7E9E}
+		{6551E2AF-8DD9-4819-AECA-6C676F1972BD} = {08D7E428-DA9C-429B-8481-B0D2D4DD03F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9197CCA8-9853-4465-BBEC-C5FA3BB7008E}
