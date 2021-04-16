@@ -462,6 +462,7 @@ namespace ChartSamples
             this.menuItemCopy,
             this.menuItemCopyAll});
             //this.contextMenuRTF.Popup += new System.EventHandler(this.contextMenuRTF_Popup);
+            this.contextMenuRTF.Opening += ContextMenuRTF_Opening;
             // 
             // menuItemCopy
             // 
@@ -517,12 +518,13 @@ namespace ChartSamples
             this.ResumeLayout(false);
 
 		}
-		#endregion
 
-		/// <summary>
-		/// Loads settings from the sample framework configuration file.
-		/// </summary>
-		private void LoadSettings()
+        #endregion
+
+        /// <summary>
+        /// Loads settings from the sample framework configuration file.
+        /// </summary>
+        private void LoadSettings()
 		{
 			string errorMsg = "Invalid configuration file format.";
 
@@ -1343,7 +1345,18 @@ namespace ChartSamples
 			contextMenuRTF.Items[0].Enabled = copyEnabled;
 		}
 
-		private void menuItemCopy_Click(object sender, System.EventArgs e)
+        private void ContextMenuRTF_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            bool copyEnabled = true;
+            if (this.CurrentRichTextBox != null &&
+                this.CurrentRichTextBox.SelectedText.Length == 0)
+            {
+                copyEnabled = false;
+            }
+            contextMenuRTF.Items[0].Enabled = copyEnabled;
+        }
+
+        private void menuItemCopy_Click(object sender, System.EventArgs e)
 		{
 			if(this.CurrentRichTextBox != null)
 			{
