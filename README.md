@@ -1,8 +1,9 @@
 # winforms-datavisualization-Net5
- Porting to .Net5 of dotnet/winforms-datavisualization project (https://github.com/dotnet/winforms-datavisualization)
+ Rought porting to .Net5 of dotnet/winforms-datavisualization project (https://github.com/dotnet/winforms-datavisualization) and the [sample solution](https://github.com/AngeloCresta/winforms-datavisualization-net5/tree/main/sample) as well. 
+ Hope this helps...
  
 # Data Visualization
-This repository contains partial source code of the `System.Windows.Forms.DataVisualization` namespace that provides charting for WinForms. We ported and open sourced those components to enable charting features for WinForms applications that are developed on .NET Core 5.
+This repository contains partial source code of the `System.Windows.Forms.DataVisualization` namespace that provides charting for WinForms. Microsoft ported and open sourced those components to enable charting features for WinForms applications that are developed on .NET Core 3, I've made the porting to .Net 5. 
 
 
 ## Getting started with Chart Controls
