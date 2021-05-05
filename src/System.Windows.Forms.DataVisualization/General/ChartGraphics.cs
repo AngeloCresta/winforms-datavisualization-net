@@ -4579,35 +4579,27 @@ System.Drawing.Image image = _common.ImageLoader.LoadImage( backImage );
         /// <param name="rectangle">RectangleF structure in absolute coordinates.</param>
         /// <returns>RectangleF structure in relative coordinates.</returns>
 		public RectangleF GetRelativeRectangle( RectangleF rectangle )
-		{
-            // Check arguments
-            if (rectangle == null)
-                throw new ArgumentNullException("rectangle");
-            
+        {
             RectangleF relative = RectangleF.Empty;
 
-			// Convert absolute coordinates to relative coordinates
-			relative.X = rectangle.X * 100F / ((float)(_width - 1)); 
-			relative.Y = rectangle.Y * 100F / ((float)(_height - 1)); 
-			relative.Width = rectangle.Width * 100F / ((float)(_width - 1)); 
-			relative.Height = rectangle.Height * 100F / ((float)(_height - 1)); 
+            // Convert absolute coordinates to relative coordinates
+            relative.X = rectangle.X * 100F / ((float)(_width - 1));
+            relative.Y = rectangle.Y * 100F / ((float)(_height - 1));
+            relative.Width = rectangle.Width * 100F / ((float)(_width - 1));
+            relative.Height = rectangle.Height * 100F / ((float)(_height - 1));
 
-			// Return Relative coordinates
-			return relative;
-		}
+            // Return Relative coordinates
+            return relative;
+        }
 
-		/// <summary>
+        /// <summary>
         /// This method takes a PointF object that is using absolute coordinates 
         /// and returns a PointF object that uses relative coordinates.
-		/// </summary>
-		/// <param name="point">PointF object in absolute coordinates.</param>
-		/// <returns>PointF object in relative coordinates.</returns>
-		public PointF GetRelativePoint( PointF point )
-		{
-            // Check arguments
-            if (point == null)
-                throw new ArgumentNullException("point");
-            
+        /// </summary>
+        /// <param name="point">PointF object in absolute coordinates.</param>
+        /// <returns>PointF object in relative coordinates.</returns>
+        public PointF GetRelativePoint( PointF point )
+		{            
             PointF relative = PointF.Empty;
 
 			// Convert absolute coordinates to relative coordinates
@@ -4627,10 +4619,7 @@ System.Drawing.Image image = _common.ImageLoader.LoadImage( backImage );
         /// <returns>SizeF object in relative coordinates.</returns>
 		public SizeF GetRelativeSize( SizeF size )
 		{
-            // Check arguments
-            if (size == null)
-                throw new ArgumentNullException("size"); 
-            
+          
             SizeF relative = SizeF.Empty;
 
 			// Convert absolute coordinates to relative coordinates
@@ -4649,9 +4638,6 @@ System.Drawing.Image image = _common.ImageLoader.LoadImage( backImage );
         /// <returns>PointF object in absolute coordinates.</returns>
 		public PointF GetAbsolutePoint( PointF point )
 		{
-            // Check arguments
-            if (point == null)
-                throw new ArgumentNullException("point");
 
 			PointF absolute = PointF.Empty;
 
@@ -4671,10 +4657,6 @@ System.Drawing.Image image = _common.ImageLoader.LoadImage( backImage );
         /// <returns>RectangleF object in absolute coordinates.</returns>
 		public RectangleF GetAbsoluteRectangle( RectangleF rectangle )
 		{
-            // Check arguments
-            if (rectangle == null)
-                throw new ArgumentNullException("rectangle");
-
 			RectangleF absolute = RectangleF.Empty;
 
 			// Convert relative coordinates to absolute coordinates
@@ -4694,11 +4676,7 @@ System.Drawing.Image image = _common.ImageLoader.LoadImage( backImage );
         /// <param name="size">SizeF object in relative coordinates.</param>
         /// <returns>SizeF object in absolute coordinates.</returns>
 		public SizeF GetAbsoluteSize( SizeF size )
-		{
-            // Check arguments
-            if (size == null)
-                throw new ArgumentNullException("size"); 
-            
+		{            
             SizeF absolute = SizeF.Empty;
 
 			// Convert relative coordinates to absolute coordinates

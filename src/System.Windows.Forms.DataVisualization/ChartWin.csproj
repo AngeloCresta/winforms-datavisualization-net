@@ -1,15 +1,20 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CLSCompliant>false</CLSCompliant>
-    <NoWarn>$(NoWarn);618</NoWarn>
+    <NoWarn>1701;1702;618</NoWarn>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <DefineConstants>$(DefineConstants);WINFORMS_CONTROL</DefineConstants>
     <!-- <Win32Manifest>Resources\System\Windows\Forms\XPThemes.manifest</Win32Manifest> -->
+  </PropertyGroup>
+  
+  <!-- Added to suppress MSBuild resource conditional compilation warning in tool-generated ChartWin SR.cs code. -->
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);MSB3042</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
