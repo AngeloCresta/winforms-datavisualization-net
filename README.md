@@ -124,7 +124,10 @@ and then copy the relavant portion of the code (C# or VB.Net):
 
 ## History
 8th April 2021:     Initial Porting to .Net 5
+
 6th December 2021:  Porting to .Net 6
+
 14th November 2022: Porting to .Net 7
+
 
 Hope this helps!
