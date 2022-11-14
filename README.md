@@ -1,17 +1,17 @@
-# winforms-datavisualization .Net 5
- Rought porting to .Net5 of [dotnet/winforms-datavisualization project](https://github.com/dotnet/winforms-datavisualization) and the [sample solution](https://github.com/AngeloCresta/winforms-datavisualization-net5/tree/main/sample) as well. 
+# winforms-datavisualization .Net 5 - .Net 7
+ Rought porting to .Net5 --> .Net7 of [dotnet/winforms-datavisualization project](https://github.com/dotnet/winforms-datavisualization) and the [sample solution](https://github.com/AngeloCresta/winforms-datavisualization-net5/tree/main/sample) as well. 
  
 # Data Visualization
 [This repository](https://github.com/AngeloCresta/winforms-datavisualization-net5) contains partial source code of the `System.Windows.Forms.DataVisualization` namespace that provides charting for WinForms. 
 Microsoft ported and open sourced those components to enable charting features for WinForms applications that are developed on .NET Core 3.
 
-I've made the porting to .Net 5:
+I've made the porting to .Net 5 then to .Net 7:
 - updating references
 - updating project files
 - moving deprecated controls like ContextMenu, MenuItems to new ones (ContextMenuStrip, ToolStripMenuItems) and relative methods
 - ...
 
-Application Running .Net 5:
+Application Running .Net (not FW):
 
 ![ApplicationRunning](https://user-images.githubusercontent.com/12256319/115564835-2480c380-a2b9-11eb-9d32-879855f5f4c3.PNG)
 
@@ -91,7 +91,7 @@ Ported Version (Relavant Portion):
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFrameworks>net7.0-windows</TargetFrameworks>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CLSCompliant>false</CLSCompliant>
@@ -123,6 +123,8 @@ and then copy the relavant portion of the code (C# or VB.Net):
 
 
 ## History
-8th April: Initial Porting to .Net 5
+8th April 2021:     Initial Porting to .Net 5
+6th December 2021:  Porting to .Net 6
+14th November 2022: Porting to .Net 7
 
 Hope this helps!

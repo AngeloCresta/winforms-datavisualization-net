@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{B90AC2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pkg", "pkg", "{08D7E428-DA9C-429B-8481-B0D2D4DD03F1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Windows.Forms.DataVisualization.net5", "pkg\System.Windows.Forms.DataVisualization.net5.csproj", "{6551E2AF-8DD9-4819-AECA-6C676F1972BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Windows.Forms.DataVisualization.net", "pkg\System.Windows.Forms.DataVisualization.net.csproj", "{6551E2AF-8DD9-4819-AECA-6C676F1972BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

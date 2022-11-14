@@ -21,7 +21,7 @@
 
     <IncludeSymbols>false</IncludeSymbols>
 
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFrameworks>net7.0-windows</TargetFrameworks>
     <IsPackable>true</IsPackable>
     <NoWarn>$(NoWarn);NU5125</NoWarn>
     <UseWindowsForms>true</UseWindowsForms>
@@ -34,10 +34,10 @@
 
   <!-- nuspec properties -->
   <PropertyGroup>
-    <PackageId>System.Windows.Forms.DataVisualization.Net5 </PackageId>
+    <PackageId>System.Windows.Forms.DataVisualization.Net </PackageId>
     <Description>This package contains the charting controls for Windows Forms for .NET Core.</Description>
     <Authors>Angelo Cresta</Authors>
-    <RepositoryUrl>https://github.com/AngeloCresta/winforms-datavisualization-net5</RepositoryUrl>
+    <RepositoryUrl>https://github.com/AngeloCresta/winforms-datavisualization-net</RepositoryUrl>
     <PackageTags>WinForms Windows Forms DataVisualization DataVisualisation Data Visualization Visualisation</PackageTags>
   </PropertyGroup>
 

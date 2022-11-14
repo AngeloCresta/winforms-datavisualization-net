@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFrameworks>net7.0-windows</TargetFrameworks>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CLSCompliant>false</CLSCompliant>
@@ -10,8 +10,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <DefineConstants>$(DefineConstants);WINFORMS_CONTROL</DefineConstants>
     <!-- <Win32Manifest>Resources\System\Windows\Forms\XPThemes.manifest</Win32Manifest> -->
-  </PropertyGroup>
-  
+  </PropertyGroup> 
   <!-- Added to suppress MSBuild resource conditional compilation warning in tool-generated ChartWin SR.cs code. -->
   <PropertyGroup>
     <NoWarn>$(NoWarn);MSB3042</NoWarn>
@@ -24,12 +23,12 @@
 
   <ItemGroup>
     <!-- Versions are defined in eng\Versions.props -->
-    <PackageReference Include="Microsoft.NETCore.Platforms" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
-    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
-    <PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
-    <PackageReference Include="System.Windows.Extensions" Version="5.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="7.0.0" />
+    <PackageReference Include="System.Windows.Extensions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup Label="Embedded Resources">
@@ -42,21 +41,6 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Update="Microsoft.NETCore.Platforms" Version="5.0.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
   <!--<ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="4.6.0-preview.19073.11" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
