@@ -21,7 +21,7 @@
 
     <IncludeSymbols>false</IncludeSymbols>
 
-    <TargetFrameworks>net7.0-windows</TargetFrameworks>
+    <TargetFrameworks>net7.0-windows;net8.0-windows</TargetFrameworks>
     <IsPackable>true</IsPackable>
     <NoWarn>$(NoWarn);NU5125</NoWarn>
     <UseWindowsForms>true</UseWindowsForms>

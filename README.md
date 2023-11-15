@@ -5,7 +5,7 @@
 [This repository](https://github.com/AngeloCresta/winforms-datavisualization-net5) contains partial source code of the `System.Windows.Forms.DataVisualization` namespace that provides charting for WinForms. 
 Microsoft ported and open sourced those components to enable charting features for WinForms applications that are developed on .NET Core 3.
 
-I've made the porting to .Net 5 then to .Net 7:
+I've made the porting to .Net 5 then to .Net 8:
 - updating references
 - updating project files
 - moving deprecated controls like ContextMenu, MenuItems to new ones (ContextMenuStrip, ToolStripMenuItems) and relative methods
@@ -128,6 +128,8 @@ and then copy the relavant portion of the code (C# or VB.Net):
 6th December 2021:  Porting to .Net 6
 
 14th November 2022: Porting to .Net 7
+
+15th November 2023: Porting to .Net 8
 
 
 Hope this helps!
