@@ -1,4 +1,4 @@
-# winforms-datavisualization .Net 5 - .Net 8
+# winforms-datavisualization .Net 8
  Rought porting to .Net5 --> .Net8 of [dotnet/winforms-datavisualization project](https://github.com/dotnet/winforms-datavisualization) and the [sample solution](https://github.com/AngeloCresta/winforms-datavisualization-net/tree/main/sample) as well. 
  
 # Data Visualization
