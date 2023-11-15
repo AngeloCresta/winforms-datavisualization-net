@@ -1,8 +1,8 @@
-# winforms-datavisualization .Net 5 - .Net 7
- Rought porting to .Net5 --> .Net7 of [dotnet/winforms-datavisualization project](https://github.com/dotnet/winforms-datavisualization) and the [sample solution](https://github.com/AngeloCresta/winforms-datavisualization-net5/tree/main/sample) as well. 
+# winforms-datavisualization .Net 5 - .Net 8
+ Rought porting to .Net5 --> .Net8 of [dotnet/winforms-datavisualization project](https://github.com/dotnet/winforms-datavisualization) and the [sample solution](https://github.com/AngeloCresta/winforms-datavisualization-net/tree/main/sample) as well. 
  
 # Data Visualization
-[This repository](https://github.com/AngeloCresta/winforms-datavisualization-net5) contains partial source code of the `System.Windows.Forms.DataVisualization` namespace that provides charting for WinForms. 
+[This repository](https://github.com/AngeloCresta/winforms-datavisualization-net) contains partial source code of the `System.Windows.Forms.DataVisualization` namespace that provides charting for WinForms. 
 Microsoft ported and open sourced those components to enable charting features for WinForms applications that are developed on .NET Core 3.
 
 I've made the porting to .Net 5 then to .Net 8:
