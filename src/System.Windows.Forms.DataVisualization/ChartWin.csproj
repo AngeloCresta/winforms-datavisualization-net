@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0-windows;net8.0-windows</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows;net9.0-windows;net10.0-windows</TargetFrameworks>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CLSCompliant>false</CLSCompliant>
@@ -13,9 +13,11 @@
   </PropertyGroup> 
   <!-- Added to suppress MSBuild resource conditional compilation warning in tool-generated ChartWin SR.cs code. -->
   <PropertyGroup>
-    <NoWarn>$(NoWarn);MSB3042</NoWarn>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+    <NoWarn>$(NoWarn);SYSLIB0011;WFO1000;WFO5001;MSB3042;NU1510;NU1903</NoWarn>
+    <GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="Annotation\AnnotationDesign.cs" />
     <Compile Remove="Common\EditorNames.cs" />
@@ -25,10 +27,10 @@
     <!-- Versions are defined in eng\Versions.props -->
     <!--<PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.0" />-->
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
-    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.0" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
-    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
-    <PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.0" />
+    <PackageReference Include="System.Windows.Extensions" Version="10.0.0" />
   </ItemGroup>
 
   <ItemGroup Label="Embedded Resources">
@@ -41,11 +43,6 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <!--<ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="4.6.0-preview.19073.11" />
-    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
-    <PackageReference Include="System.Windows.Extensions" Version="4.6.0-preview.19073.11" />
-  </ItemGroup>-->
 
   <!-- <ItemGroup>
     <EmbeddedResource Update="Resources\SR.resx">

@@ -21,7 +21,7 @@
 
     <IncludeSymbols>false</IncludeSymbols>
 
-    <TargetFrameworks>net7.0-windows;net8.0-windows</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows;net9.0-windows;net10.0-windows</TargetFrameworks>
     <IsPackable>true</IsPackable>
     <NoWarn>$(NoWarn);NU5125</NoWarn>
     <UseWindowsForms>true</UseWindowsForms>
@@ -78,10 +78,5 @@
       </ProjectReference>
     </ItemGroup>
   </Target>
-
-  <!-- Call custom targets (defined below) when creating the package -->
-  <PropertyGroup>
-    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificBuildOutput);ResolveReferences</TargetsForTfmSpecificContentInPackage>
-  </PropertyGroup>
 
 </Project>
