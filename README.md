@@ -129,9 +129,8 @@ and then copy the relavant portion of the code (C# or VB.Net):
 
 14th November 2022: Porting to .Net 7
 
-17th November 2025: Porting to .Net 10
-
 15th November 2023: Porting to .Net 8
 
+17th November 2025: Porting to .Net 10 (and .Net 9)
 
 Hope this helps!
