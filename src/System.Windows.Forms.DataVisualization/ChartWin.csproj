@@ -1,36 +1,60 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0-windows;net9.0-windows;net10.0-windows</TargetFrameworks>
+    <TargetFrameworks>net481;net10.0-windows</TargetFrameworks>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <CLSCompliant>false</CLSCompliant>
     <NoWarn>1701;1702;618</NoWarn>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <DefineConstants>$(DefineConstants);WINFORMS_CONTROL</DefineConstants>
     <!-- <Win32Manifest>Resources\System\Windows\Forms\XPThemes.manifest</Win32Manifest> -->
-  </PropertyGroup> 
-  <!-- Added to suppress MSBuild resource conditional compilation warning in tool-generated ChartWin SR.cs code. -->
+  </PropertyGroup>
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+    <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
   <PropertyGroup>
     <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
-    <NoWarn>$(NoWarn);SYSLIB0011;WFO1000;WFO5001;MSB3042;NU1510;NU1903</NoWarn>
+    <NoWarn>$(NoWarn);SYSLIB0011;WFO1000;WFO5001;MSB3042;NU1510;NU1903;SYSLIB0014;CA1416</NoWarn>
     <GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\CommonVersionAssemblyInfo.cs">
+      <Link>Properties\CommonVersionAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\CompanyAssemblyInfo.cs">
+      <Link>Properties\CompanyAssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+
   <ItemGroup>
     <Compile Remove="Annotation\AnnotationDesign.cs" />
     <Compile Remove="Common\EditorNames.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <!-- Versions are defined in eng\Versions.props -->
-    <!--<PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.0" />-->
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
-    <PackageReference Include="System.Drawing.Common" Version="10.0.0" />
+  <ItemGroup Condition=" $(targetframework.startswith('net48')) ">
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.12" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
-    <PackageReference Include="System.Resources.Extensions" Version="10.0.0" />
-    <PackageReference Include="System.Windows.Extensions" Version="10.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.12" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(TargetFramework.Contains('-windows')) == true">
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.12" />
+    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.12" />
+    <PackageReference Include="System.Windows.Extensions" Version="10.0.12" />
   </ItemGroup>
 
   <ItemGroup Label="Embedded Resources">
@@ -39,7 +63,8 @@
     </EmbeddedResource>
     <EmbeddedResource Update="SR.resx">
       <GenerateSource>true</GenerateSource>
-      <Namespace>System.Windows.Forms.DataVisualization.Charting</Namespace> <!-- I think you want System here -->
+      <Namespace>System.Windows.Forms.DataVisualization.Charting</Namespace>
+      <!-- I think you want System here -->
     </EmbeddedResource>
   </ItemGroup>
 
