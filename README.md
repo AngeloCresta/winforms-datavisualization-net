@@ -1,5 +1,7 @@
 # winforms-datavisualization .Net 10
  Rought porting to .Net8 --> .Net10 of [dotnet/winforms-datavisualization project](https://github.com/dotnet/winforms-datavisualization) and the [sample solution](https://github.com/AngeloCresta/winforms-datavisualization-net/tree/main/sample) as well. 
+ The project as also been retroported to .Net481
+ 
  
 # Data Visualization
 [This repository](https://github.com/AngeloCresta/winforms-datavisualization-net) contains partial source code of the `System.Windows.Forms.DataVisualization` namespace that provides charting for WinForms. 
