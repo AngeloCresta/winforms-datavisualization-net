@@ -136,4 +136,6 @@ and then copy the relavant portion of the code (C# or VB.Net):
 
 17th November 2025: Porting to .Net 10 (and .Net 9)
 
+16th October 2026: Retro Porting to .Net 481
+
 Hope this helps!
